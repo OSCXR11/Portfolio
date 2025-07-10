@@ -7,17 +7,18 @@ function toggleMenu() {
 }
 
 window.addEventListener("DOMContentLoaded", () => {
-  const wrapper = document.getElementById("project1-wrapper");
-  const btn1 = document.querySelector(".hover-btn-1");
-  const btn2 = document.querySelector(".hover-btn-2");
+  const buttons = document.querySelectorAll(".hover-btn");
 
-  btn2.addEventListener("mouseenter", () => {
-    wrapper.classList.add("slide-left");
-    wrapper.classList.remove("slide-right");
-  });
+  buttons.forEach((btn) => {
+    const projectId = btn.dataset.project;
+    const direction = btn.dataset.dir;
+    const wrapper = document.getElementById(`project${projectId}-wrapper`);
 
-  btn1.addEventListener("mouseenter", () => {
-    wrapper.classList.add("slide-right");
-    wrapper.classList.remove("slide-left");
+    btn.addEventListener("mouseenter", () => {
+      wrapper.classList.remove("slide-left", "slide-right");
+      wrapper.classList.add(
+        direction === "left" ? "slide-left" : "slide-right"
+      );
+    });
   });
 });
