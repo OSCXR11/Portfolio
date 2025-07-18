@@ -58,6 +58,7 @@ a:hover {
 
 .logo {
   font-size: 2rem;
+  text-decoration: underline;
 }
 
 .logo:hover {
@@ -158,9 +159,10 @@ section {
 /*Profile Section*/
 #profile {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 5rem;
   height: 80vh;
+  width: 100%;
 }
 
 .section__pic-container {
@@ -168,6 +170,7 @@ section {
   height: 400px;
   width: 400px;
   margin: auto 0;
+  padding-left: 300px;
 }
 
 .section__pic-container img {
@@ -206,6 +209,13 @@ section {
   justify-content: center;
   margin-top: 1rem;
   gap: 1rem;
+}
+
+.profile_arrow {
+  cursor: pointer;
+  height: 2rem;
+  padding-top: 610px;
+  padding-left: 365px;
 }
 
 /* Icons */
@@ -365,7 +375,7 @@ section {
 .image-wrapper {
   position: relative;
   width: 100%;
-  height: 500px;
+  height: 400px;
   overflow: hidden;
 }
 
